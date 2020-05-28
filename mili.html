@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Korean Inventions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ccc;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c92222;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #000;
+}
+
+
+.main {
+  margin-left: 200px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}
+
+
+.dropdown-container {
+  display: none;
+  background-color: #1486cc;
+  padding-left: 8px;
+}
+
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+a.active {
+	background-color: red;
+	colour: white;
+}
+
+
+div {
+  width: 300px;
+  margin: auto;
+}
+
+p {
+
+  border-top: 2px dashed;
+  border-color: blue !important;
+  margin:0; padding: 30px;
+}
+
+
+
+p:nth-child(even) {
+  border-left: 2px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px; 
+  padding-right: 0;
+}
+
+p:nth-child(odd) {
+  border-right: 2px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px; 
+  padding-left: 0;
+}
+
+p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+.center {
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <button class="dropdown-btn">Inventions 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="tech.html">Technology</a>
+    <a href="mus.html">Music</a>
+    <a href="agri.html">Agriculture</a>
+    <a class="active" href="mili.html">Military</a>
+    <a href="int.html">Internet</a>
+  </div>
+</div>
+
+<h1 class="center">Military Inventions</h1>
+
+<div>
+  <p>4th Century. Iron plate Armor. Long iron plates linked vertically to each other, was a feature of armor only found in Korea.</p>
+<p>1380. Navel Artillery. Produced the most advanced naval cannons in East Asia.</p>
+<p>1409. Hwacha. Mobile multiple rocket launcher. Used gunpowder to launch up to 200 singijeon rockets at once.</p>
+<p>15th Century. Armored Warship. Geobukseon, or turtle ship was the first ever armored warship in the world. Most often associated with General Yi Sun-Shin</p>
+<p>1592. Time Bomb. The pigyok chinchonllae, or the Flying Thunderbolt was a time bomb with an adjustable fuse mechanism.</p>
+<p>1867. Bulletproof Vest. Myeonjae Baegab. A soft bulletproof vest invented n the Joseon Dynasty.</p>
+<p>2010. Super aEgis II. An automated weapon capable of identification, tracking, and destruction of a moving target from 4km away.</p>
+
+
+
+</div>
+
+
+
+<script>
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 

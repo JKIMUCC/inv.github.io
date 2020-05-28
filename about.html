@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Korean Inventions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ccc;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c92222;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #000;
+}
+
+
+.main {
+  margin-left: 200px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}
+
+
+.dropdown-container {
+  display: none;
+  background-color: #1486cc;
+  padding-left: 8px;
+}
+
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+a.active {
+	background-color: blue;
+	colour: white;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h1 class="center" style="font-size:60px;">About</h1>
+
+<p class="center" style="font-size:30px;"> This website was made by an international</p>
+<p class="center" style="font-size:30px;"> student from Upper Canada College that</p>
+<p class="center" style="font-size:30px;"> realized that people did not have any</p>
+<p class="center" style="font-size:30px;"> knowledge of the various South Korean</p>
+<p class="center" style="font-size:30px;"> inventions. The purpose of this website</p>
+<p class="center" style="font-size:30px;"> is to educate.</p>
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a class="active" href="about.html">About</a>
+  <button class="dropdown-btn">Inventions 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="tech.html">Technology</a>
+    <a href="mus.html">Music</a>
+    <a href="agri.html">Agriculture</a>
+    <a href="mili.html">Military</a>
+    <a href="int.html">Internet</a>
+  </div>
+</div>
+
+<script>
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 
